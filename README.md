@@ -110,4 +110,3 @@ Explanation of Each Argument
     - Loaded into QEMU
     - Debugged using GDB
     - Converted to raw binary using `objcopy`
-# C_lang
