@@ -4,8 +4,8 @@ awb: main.c m.s
 assembly: main.c
 	riscv64-unknown-elf-gcc -O0 -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tmain.ld main.c -S
 
-binary: main.s main.ld
-	riscv64-unknown-elf-gcc -O0 -ggdb -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tmain.ld m.s -o main.elf
+binary: csam.s main.ld
+	riscv64-unknown-elf-gcc -O0 -ggdb -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tmain.ld csam.s -o main.elf
 	riscv64-unknown-elf-objcopy -O binary main.elf main.bin
 
 printbin: main.bin
